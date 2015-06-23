@@ -10,8 +10,8 @@
   "private": true,
   "version": "0.6.2",
   "dependencies": {
-    "ghost": "0.6.2",
-    "ghost-s3-storage": "~0.2.1",
+    "ghost": "0.6.4",
+    "cloudinary": "~1.2.1",
     "pg": "latest"
   },
   "engines": {

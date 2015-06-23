@@ -5,15 +5,14 @@ var path = require('path'),
     fileStorage,
     storage;
 
-if (!!process.env.S3_ACCESS_KEY_ID) {
+if (!!process.env.CLOUDINARY_NAME) {
   fileStorage = true
   storage = {
-    active: 'ghost-s3',
-    'ghost-s3': {
-      accessKeyId:     process.env.S3_ACCESS_KEY_ID,
-      secretAccessKey: process.env.S3_ACCESS_SECRET_KEY,
-      bucket:          process.env.S3_BUCKET_NAME,
-      region:          process.env.S3_BUCKET_REGION
+    active: 'ghost-cloudinary-store',
+    'ghost-cloudinary-store': {
+      cloud_name: process.env.CLOUDINARY_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET
     }
   }
 } else {
